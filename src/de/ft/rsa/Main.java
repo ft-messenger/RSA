@@ -2,12 +2,9 @@ package de.ft.rsa;
 
 import javax.crypto.*;
 import java.security.*;
-import java.security.spec.KeySpec;
 
 public class Main {
     static KeyPair key = null;
-
-
     public static void main(String[] args) throws NoSuchAlgorithmException, IllegalBlockSizeException, InvalidKeyException, NoSuchPaddingException, BadPaddingException {
         gen();
         byte[] enc = encrypt("Hallo Tim", key.getPublic());
@@ -17,9 +14,8 @@ public class Main {
 
     public static void gen() throws NoSuchAlgorithmException {
         KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
-        keygen.initialize(512);
+        keygen.initialize(1024);
         key = keygen.generateKeyPair();
-
 
 
     }
