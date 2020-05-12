@@ -18,11 +18,7 @@ public class Main {
     public static void main(String[] args) throws NoSuchAlgorithmException, IllegalBlockSizeException, InvalidKeyException, NoSuchPaddingException, BadPaddingException {
 
 
-        try {
-            publicKey = KeyFactory.getInstance("RSA").generatePublic(new RSAPublicKeySpec( new BigInteger("10910853303221765486890206096462437523034786405640349999702259107045652321478800202054466683468758145555104815413076674318387553951639597769938150328850093"), new BigInteger("65537")));
-        } catch (InvalidKeySpecException e) {
-            e.printStackTrace();
-        }
+
 
 
        key = utils.gen();
