@@ -27,15 +27,14 @@ public class Main {
 
 
 
-        byte[] enc = encrypt("Hallo Tim", key.getPublic());
+        byte[] enc = encrypt("a55b3y", key.getPublic());
         System.out.println("publickey: "+key.getPublic());
-        decrypt()
         System.out.println(new String(enc));
     }
 
     public static void gen() throws NoSuchAlgorithmException {
         KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
-        keygen.initialize(1024);
+        keygen.initialize(512);
         key = keygen.generateKeyPair();
 
 
